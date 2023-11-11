@@ -7,11 +7,10 @@ servers:
 paths:
   '/notifications/{notification_id}':
     parameters:
-    - schema:
-      type: integer
-      name: notification_id
-      in: path
-      required: true
+      - schema:
+        name: notification_id
+        in: path
+        required: true
     get:
       summary: notification
       tags: [ ]
@@ -69,7 +68,7 @@ paths:
   /notifications/review:
     post:
       summary: notification
-      operationId: post-notifications
+      operationId: post-review-notifications
       description: Create a new notification
       tags: [ ]
       requestBody:
@@ -104,7 +103,7 @@ paths:
   /notifications/ratingwithreview:
     post:
       summary: notification
-      operationId: post-notifications
+      operationId: post-ratingwithreview-notifications
       description: Create a new notification
       tags: [ ]
       requestBody:
